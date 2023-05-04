@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+  background: #18122b;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+/* palete
+#635985
+#443C68
+#393053
+#18122B
+*/
+
+header {
+  height: 100px;
+}
+
+header.navbar-container {
+  width: 100%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-block: 1rem;
+  z-index: 999;
+  overflow: hidden;
+  position: fixed;
+  background: black;
+  opacity: 0.8;
+}
+
+header.navbar-container .logo img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+header.navbar-container .nav-list ul {
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem 1rem;
+}
+
+header.navbar-container .nav-list li {
+  list-style-type: none;
+}
+
+header.navbar-container .nav-list li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.05rem;
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  transition: all 0.2s ease-in-out;
+}
+
+header.navbar-container .nav-list li:hover a {
+  background-color: white;
+  color: black;
+}
+
+main {
+  margin-top: 80px;
+  width: 100%;
+  margin-inline: auto;
+  padding: 1rem 4rem;
+  display: flex;
+  /* flex : 1; */
+}
+
+main .card {
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0px 5px 8px 0px black;
+  background: #443c68;
+  padding: 5px 15px;
+  margin: 20px;
+}
+
+main .content {
+  flex: 3;
+}
+
+main .content .desc p {
+  align: center;
+}
+
+main .content .cover img {
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px 0px;
+}
+
+main .content .project-container {
+  display: flex;
+  flex-direction: column;
+}
+
+main .content .project-container .project {
+  width: 100%;
+  display: flex;
+}
+
+main .content .project-card {
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0px 5px 8px 0px black;
+  background: black;
+  padding: 10px 15px;
+  margin: 20px;
+}
+
+main .content .project-card a {
+  background: white;
+  padding: 5px;
+  border-radius: 5px;
+  color: black;
+}
+
+main .content .project-card img {
+  padding-top: 10px;
+  max-height: 120px;
+  max-width: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+main .content .project-card h2 {
+  padding: none;
+}
+
+main .content .project-card a,
+p {
+  align: justify;
+  font-size: 12px;
+}
+
+main .content .project-card a:hover {
+  background: black;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+}
+
+main .content .language i {
+  padding: 5px;
+}
+
+main aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main aside.tentang-saya .social-media {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main aside.social-media i,
+a {
+  text-decoration: none;
+  color: white;
+  padding: 20px 2px;
+  transition: all 0.1s ease-in-out;
+}
+
+main aside .social-media a:hover {
+  color: #89b0d9;
+}
+
+main aside img {
+  max-width: 200px;
+  border-radius: 50%;
+  padding: 20px;
+}
+
+footer {
+  color: white;
+  background: black;
+  width: 100%;
+  padding: 10px;
+}
+
+footer p {
+  margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+  header.navbar-container {
+    flex-direction: column;
+  }
+  header.navbar-container img {
+    margin-top: 10px;
+  }
+
+  header.navbar-container .nav-list ul {
+    flex-wrap: wrap;
+    column-gap: 0.5rem;
+  }
+
+  main {
+    padding: 1rem 3rem;
+    flex-direction: column;
+  }
+
+  main .content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  main .content .content-description .title {
+    font-size: 3rem;
+  }
+
+  main .content .content-description p {
+    font-size: 1rem;
+  }
+
+  main .content .content-image {
+    order: -1;
+  }
+}
